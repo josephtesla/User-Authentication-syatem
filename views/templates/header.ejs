@@ -1,0 +1,111 @@
+<html>
+
+        <head>
+            <style>
+            </style>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <title>Stackqora.com </title>
+            <link rel="stylesheet" href="css/bootstrap.min.css" />
+            <link rel="stylesheet"  href="css/bootstrap.css" />
+            <script src="js/bootstrap.min.js"></script>
+            <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <link href="app.css" rel="stylesheet">
+            <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+            <!-- Favicons -->
+      <link href="img/favicon.png" rel="icon">
+      <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+        </head>
+        <style>
+        .navbar-default {
+          background: rgb(32, 32, 32);
+        }
+        #navbar ul li a {
+            color: white;
+        }
+        .navbar-brand {
+          color:white !important;
+        }
+        .content-app {
+          height: 400px;
+        }
+        .userpart{
+          text-align: center;
+        }
+        form {
+          width:400px;
+        }
+        #messages ul.error {
+          list-style: none;
+          color: #a94442;
+          background-color:#f2dede;
+          border-color:#ebccd1;
+          padding: 15px;
+          margin-bottom:20px;
+          border: 1px solid transparent;
+          border-radius: 4px;
+        }
+        #messages ul.success {
+          list-style: none;
+          color: #3c763d;
+          background-color:#dff0d8;
+          border-color:#d6e9c6;
+          padding: 15px;
+          margin-bottom:20px;
+          border: 1px solid transparent;
+          border-radius: 4px;
+        }
+
+        
+        </style>
+          <body>
+            
+            <!-- Static navbar --> <nav id="navi" class="navbar navbar-default"> <div class="container">
+                 <div class="navbar-header"> 
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> 
+                          <span class="icon-bar"></span> 
+                          <span class="icon-bar"></span> </button>
+                           <a class="navbar-brand" href="#"><span class="hed"><span class="bit">Stack</span>qora</span></a>
+                         </div> 
+                         <div id="navbar" class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav">
+                                   <li ><a href="/">Questions</a></li>
+                                    <li><a href="/about">Users</a></li>
+                                     <li><a data-toggle="modal" data-target="#myModal" href="#">Ask</a></li>
+                                      
+                                    </ul>
+                                     <ul class="nav navbar-nav navbar-right">
+                                          
+                                        <%  if(user) { %>
+                                          <li><a href="/users/logout">Logout</a></li>
+                                        <% } %>
+                                          <% if (!user) { %>
+                                            <li><a href="./register">Sign Up</a></li>
+                                            <li><a href="./login">Login</a></li> 
+                                            <% } %>
+                                           
+                                            <li>
+                                                    <a href="#"><i class="fa fa-facebook"></i> </a>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#">
+                                                      <i class="fa fa-twitter"></i>
+                                                      </a>
+                                                  </li>
+                                              <li>
+                                                    <a href="#">
+                                                      <i class="fa fa-instagram"></i>
+                                                    </a>
+                                               </li>
+                                        </ul> 
+                                    </div><!--/.nav-collapse --> </div><!--/.container-fluid --> </nav>
+    
+    
+    
+            <div class="container">
+                

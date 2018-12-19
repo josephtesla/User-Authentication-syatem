@@ -1,0 +1,43 @@
+<%- include('templates/header'); %>
+
+<div class="content-app">
+    <div class="userpart">
+        <% if (locals.errors) { %>
+            <div class="alert alert-danger">
+        <%  errors.forEach(function(error){ %>
+                <%= error.msg %><br>
+            <%  }) %>
+        </div>
+        <% }    %>
+        <%- messages();  %>
+            <center>
+            <h1>Sign Up</h1>
+            <form id="register" action="/users/register" method="POST">
+            <div class="form-group">
+            <input type="text" name="name" value="<%= (!!locals.name)?name:'' %>" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+            <input type="email" name="email" value="<%= (!!locals.email)?email:'' %>" class="form-control" id="exampleInputEmail1" placeholder="Email address">
+            </div>
+            <div class="form-group">
+            <input type="text" name="username" value="<%= (!!locals.username)?username:'' %>"class="form-control" id="exampleInputEmail1" placeholder="Username">
+            </div>
+            <div class="form-group">
+            <input type="password" name="password" value="<%= (!!locals.password)?password:'' %>"class="form-control" id="exampleInputEmail1" placeholder="Password">
+            </div>
+            <div class="form-group">
+            <input type="password" name="password2" value="<%= (!!locals.password2)?password2:'' %>"class="form-control" id="exampleInputEmail1" placeholder="Confirm password">
+            </div>
+            
+            <div class="form-group">
+                <label for="submit"></label>
+                <input type="submit" name="submit" class="btn btn-default btn-lg" id="submit" value="register">have account?
+                <a href="./login">Login now!</a>
+            </div>
+            </form>
+            
+        </center>
+    </div>
+</div>
+
+<%- include('templates/footer'); %>

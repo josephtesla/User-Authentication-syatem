@@ -1,0 +1,14 @@
+{
+  "name": "authapp",
+  "version": "1.0.0",
+  "description": "authentication system",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Joseph",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}
